@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
+  m_Name: Playermod
+  m_EditorClassIdentifier: 
+  serializedUdonProgramAsset: {fileID: 11400000, guid: b86024ae75250e1409c25f8039800245,
+    type: 2}
+  udonAssembly: ".data_start\r\n\r\n    .export JumpImpulse\r\n    \r\n    instance_0:
+    %VRCSDKBaseVRCPlayerApi, null\r\n    impulse_0: %SystemSingle, null\r\n    JumpImpulse:
+    %SystemSingle, null\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n    .export _start\r\n
+    \   \r\n    _start:\r\n    \r\n        PUSH, instance_0\r\n        EXTERN, \"VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi\"\r\n
+    \       PUSH, instance_0\r\n        PUSH, JumpImpulse\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__SetJumpImpulse__SystemSingle__SystemVoid\"\r\n
+    \       JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
+  assemblyError: 
+  graphData:
+    name: 
+    description: 
+    nodes:
+    - fullName: Variable_SystemSingle
+      uid: e9b4f654-315f-4fd8-80c6-623037df59f2
+      position: {x: 0, y: 0}
+      nodeUIDs:
+      - 
+      - 
+      - 
+      - 
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|JumpImpulse
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
+    - fullName: VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi
+      uid: aaed15d7-4a99-46b2-94db-2ee01a7ff08d
+      position: {x: 323, y: 181.59999}
+      nodeUIDs: []
+      flowUIDs: []
+      nodeValues: []
+    - fullName: Event_Start
+      uid: 4451a9e7-1f20-407c-b515-2da2fde60b62
+      position: {x: 378, y: 14.879997}
+      nodeUIDs: []
+      flowUIDs:
+      - f7019b6f-5ef6-4534-aeb0-40a0f3279341
+      nodeValues: []
+    - fullName: VRCSDKBaseVRCPlayerApi.__SetJumpImpulse__SystemSingle__SystemVoid
+      uid: f7019b6f-5ef6-4534-aeb0-40a0f3279341
+      position: {x: 605.16, y: 138.88}
+      nodeUIDs:
+      - aaed15d7-4a99-46b2-94db-2ee01a7ff08d|0
+      - 004ea9ba-26fe-4cd9-858b-9572aa077d37|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|0
+    - fullName: Get_Variable
+      uid: 004ea9ba-26fe-4cd9-858b-9572aa077d37
+      position: {x: 406.16, y: 292.28}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|e9b4f654-315f-4fd8-80c6-623037df59f2
+    updateOrder: 0
+  graphElementData:
+  - type: 5
+    uid: 4be414ab-13c6-4133-b62d-a5e6d242df5e
+    jsonData: '{"visible":true,"layout":{"serializedVersion":"2","x":10.0,"y":130.0,"width":200.0,"height":150.0}}'
+  - type: 4
+    uid: 9a85e75f-3006-4fe5-bca4-99f6c7fa18da
+    jsonData: '{"visible":true,"layout":{"serializedVersion":"2","x":10.0,"y":20.0,"width":0.0,"height":0.0}}'
+  viewTransform:
+    position: {x: -144.04916, y: -25.578753}
+    scale: 0.7561437
+  version: 1.0.0
+  showAssembly: 0
